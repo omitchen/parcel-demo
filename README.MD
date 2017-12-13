@@ -1,8 +1,10 @@
 # Parcel Example - React Counter
 
 使用 [Parcel](https://parceljs.org/) 打包的 React Counter 应用。
-    中文官网:(http://www.css88.com/doc/parcel/)
-    中文文档:(https://github.com/Mcbai/parcel-doc)
+
+中文官网:(http://www.css88.com/doc/parcel/)
+    
+中文文档:(https://github.com/Mcbai/parcel-doc)
 
 ## 特别注意:
     node 8.X以下的版本是不支持异步函数的,要运行此demo需要升级到8.x的版本
@@ -23,12 +25,15 @@
 在浏览器中打开 <http://localhost:1234>
 
 原理:
+
     parcel将一个入口点作为输入，可以是任何类型的：JS文件，HTML，CSS，图片等。在parcel中定义了各种资源类型，它们知道如何处理特定的资源类型。资源文件被解析，它的依赖关系被提取，并转换成最终的编译形式。这创建了一个资源树.
 
 值得吹逼的地方:
+
     1.速度是 ParcelJS 主要卖点。体验下来确实快，原因是多核（通过 worker 平行构建）和文件系统缓存（二次构建会快，和 webpack 的 dll 异曲同工）。不过 webpack 也有多核处理 loader 和压缩的插件，没对比过，不知道差异如何。另外 webpack 的构建速度慢在 dev 模式下还是可以的，主要还是压缩慢，在压缩速度上没有突破，仅提升编译速度，只能解决一部分问题。
 
 坑爹的地方:
+
     1.关于 0 配置。ParcelJS 本身是 0 配置的，但 HTML、JS 和 CSS 分别是通过 posthtml、babel 和 postcss 处理的，所以我们得分别配 .posthtmlrc、.babelrc 和 .postcssrc ;
 
     2.修改html文件，页面不自动更新
